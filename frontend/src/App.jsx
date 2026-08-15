@@ -95,7 +95,7 @@
 // }
 //
 // export default App;
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -110,25 +110,23 @@ import UploadStudents from "./pages/UploadStudents";
 
 function App() {
   return (
-    <HashRouter>
-      <Routes>
-        {/* Public Routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/student/login" element={<StudentLogin />} />
+    <Routes>
+      {/* Public Routes */}
+      <Route path="/" element={<Home />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/student/login" element={<StudentLogin />} />
 
-        {/* Admin Routes */}
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admin/create-drive" element={<CreateDrive />} />
-        <Route path="/admin/search-student" element={<SearchStudent />} />
-        <Route path="/admin/results" element={<ResultManagement />} />
-        <Route path="/admin/upload-students" element={<UploadStudents />} />
+      {/* Admin Routes */}
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/create-drive" element={<CreateDrive />} />
+      <Route path="/admin/search-student" element={<SearchStudent />} />
+      <Route path="/admin/results" element={<ResultManagement />} />
+      <Route path="/admin/upload-students" element={<UploadStudents />} />
 
-        {/* Student Routes */}
-        <Route path="/student" element={<StudentDashboard />} />
-        <Route path="/student/history" element={<PlacementHistory />} />
-      </Routes>
-    </HashRouter>
+      {/* Student Routes */}
+      <Route path="/student" element={<StudentDashboard />} />
+      <Route path="/student/history" element={<PlacementHistory />} />
+    </Routes>
   );
 }
 
