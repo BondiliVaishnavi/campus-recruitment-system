@@ -95,7 +95,7 @@
 // }
 //
 // export default App;
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -110,14 +110,14 @@ import UploadStudents from "./pages/UploadStudents";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/student/login" element={<StudentLogin />} />
 
-        {/* Admin Routes (protected by Layout) */}
+        {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/create-drive" element={<CreateDrive />} />
         <Route path="/admin/search-student" element={<SearchStudent />} />
@@ -128,7 +128,7 @@ function App() {
         <Route path="/student" element={<StudentDashboard />} />
         <Route path="/student/history" element={<PlacementHistory />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
