@@ -1,5 +1,5 @@
 ### Admin Login
-POST http://localhost:9091/auth/admin/login
+POST https://campus-recruitment-system-aij7.onrender.com/auth/admin/login
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ### Student Login
-POST http://localhost:9091/auth/student/login
+POST https://campus-recruitment-system-aij7.onrender.com/auth/student/login
 Content-Type: application/json
 
 {
